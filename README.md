@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Reward Earn Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Reward Earn, an innovative web application designed to reward users for their engagement and participation.
 
-## Available Scripts
+## Introduction
+The repsitory contains the source code for the Rewarding App for passengers. The purpose of this website is to provide a platform for passengers where they can earn as they embark on journey from one place to another.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Multiple Earning Opportunities:** Reward Earn offers a diverse range of earning opportunities to cater to different interests and preferences.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User-Friendly Interface:** Our intuitive interface makes navigation seamless, ensuring a hassle-free user experience for everyone.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Home:** Learn about the Earn Reward's mission, vision and objective.
+- **About Us:** Discover more about the idea behind Earn Reward's mission.
+- **Dashboard:** Each user can track their progress
+- and others.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
+- **Frontend**: HTML, CSS, Javascript, ReactJs.
+- **Deployment:** Render
 
-### `npm run build`
+## Signing Up instructions
+1. **Sign Up:** Joining Reward Earn is easy! Simply create an account using your email address or social media profiles.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Earn Points:** Start earning points by completing various tasks and activities. These tasks may include shopping from our partner stores, participating in surveys, watching videos, playing games, or referring friends to the platform.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Redeem Rewards:** Accumulate points and redeem them for exciting rewards. Choose from a wide range of options including gift cards, discounts, vouchers, merchandise, or even cash rewards.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Track Progress:** Keep track of your points, activities, and rewards through your personalized dashboard. Monitor your progress and see how close you are to claiming your desired reward.
 
-### `npm run eject`
+## Get Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Join Reward Earn today and start earning rewards for the activities you love. Whether you're looking to save money, treat yourself, or simply enjoy the perks of being active online, Reward Earn is your go-to destination for all things rewarding.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
