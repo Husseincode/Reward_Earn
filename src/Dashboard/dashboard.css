@@ -1,0 +1,33 @@
+.dashboard{
+    width: 100%;
+    background: lightgrey;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    place-content: center;
+    z-index: 3;
+}
+.dashboard > div{
+    display: grid;
+    text-align: center;
+    row-gap: 10px;
+}
+.closeIcon{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 25px;
+}
+.link{
+    color: black;
+}
+.link:link{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: 1s;
+}
+.link:hover{
+    text-decoration: underline;
+}

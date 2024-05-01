@@ -1,0 +1,121 @@
+.sections{
+    width: 100%;
+    /* min-height: 700px; */
+    /* border: 2px solid saddlebrown; */
+    padding: 15px 15px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+}
+.sections > section:first-child > button{
+    width: 70px;
+}
+.image_disp2{
+    width: 100%;
+    height: 300px;
+    background: url('../Assets/gifl.webp');
+    background-position: center;
+    background-size: cover;
+    /* filter: brightness(80%); */
+    display: flex;
+    align-items: end;
+    border-radius: 10px;
+    /* border: 2px solid dodgerblue; */
+}
+.text_disp2{
+    position: absolute;
+    display: grid;
+    flex-direction: column;
+    place-content: center;
+    place-content: center;
+    color: white;
+    z-index: 1;
+    /* border: 1px solid dodgerblue;     */
+    margin-top: 10px;
+    background-color: dodgerblue;
+    width: 95.1%;
+}
+.card{
+    transition: 1s;
+}
+.carousel{
+    width: 100%;
+    display: grid;
+    row-gap: 15px;
+    /* border: 1px solid saddlebrown; */
+}
+.card-img-top{
+    height: 200px;
+    background-position: center;
+    background-size: contain;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+section p{
+    /* font-size: 19px; */
+    color: grey;
+}
+.form_section{
+    padding: 50px 20px;
+    width: 100%;
+    display: grid;
+    margin: 0px 10px 20px;
+    /* height: 400px; */
+}
+.form_section > form{
+    display: flex;
+    flex-direction: column;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+}
+.input_sections{
+    display: grid;
+}
+.input_sections input{
+    width: 100%;
+    padding: 10px;
+}
+.postComment{
+    margin: 20px 0px 0px;
+    width: 200px;
+}
+/* .title{
+    font-size: 25px;
+} */
+/* .carousel > .card{
+    width: 100px;
+} */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .sections{
+        padding: 10px 50px;
+    }
+    .carousel{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+@media screen and (min-width: 1024px){
+    .sections{
+        padding: 10px 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* border: 1px solid dodgerblue; */
+    }
+    .sections > section{
+        width: 1000px;
+    }
+    .carousel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+}
