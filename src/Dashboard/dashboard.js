@@ -15,7 +15,7 @@ const Dashboard = () => {
         {closeDashboard && <div className='dashboard'>
             <FontAwesomeIcon onClick={close} className='closeIcon' title='Exit' icon={faClose}/>
             <div>
-                <Link onClick={()=>{window.location.reload()}} className='link' to={'/'}>Home</Link>
+                <Link className='link' to={'/'}>Home</Link>
                 <Link className='link' to={'/signup'}>Create an Account</Link>
                 <Link className='link' to={'/profile'}>Profile</Link>
             </div>
