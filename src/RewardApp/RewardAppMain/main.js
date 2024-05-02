@@ -12,6 +12,7 @@ const AppMain = () => {
     const [userData, setUserData] = useState([]);
     const [showFailureAlert, setShowFailureAlert] = useState(false);
     const [showSuccessAlert, setShowSuccessAlert] = useState(false);
+    const [postComment, setPostComment] = useState()
 
     const cardEffect = () => {
         let all_cards = document.querySelectorAll('.card');
@@ -32,6 +33,8 @@ const AppMain = () => {
             setUserData((prevData) => {
                 return [...prevData, { user_name, email, comment, id}]
             });
+            const mailToLink = `mailto:${email}?subject=${encodeURIComponent(user_name)}&body=${encodeURIComponent(comment)}`
+            window.location.href = mailToLink
             setShowSuccessAlert(true);
             setTimeout(() => {
                 setShowSuccessAlert(false)
