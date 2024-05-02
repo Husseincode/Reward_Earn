@@ -1,6 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import 'firebase/auth'
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import Footer from "../RewardApp/RewardAppFooter/footer";
 import './signup.css';
 import LoadingScreen from "../RewardApp/Loading_screen/loadingScreen";
@@ -17,6 +17,8 @@ import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Profile from "../Dashboard/Profile/profile";
+import reducer from "../useReducer/useReducer";
+import { initialData } from "../useReducer/initialData";
 
 const SignupPage = ({brand}) => {
     const navigate = useNavigate();
@@ -46,6 +48,7 @@ const SignupPage = ({brand}) => {
     /**Firebase Config */
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
+    const [state, dispatch] = useReducer(reducer, initialData)
 
     const handleChangeInSignUpPage = (e) => {
         const { name, value } = e.target;
@@ -80,11 +83,10 @@ const SignupPage = ({brand}) => {
                 setNewData((prevData) => {
                     return [...prevData, {userName, gender, email, password, uniqueID}];
                 });
-                setTimeout(()=>{
-                    return (
-                        <Profile {...data}/>
-                    )
-                }, 100);
+                dispatch({
+                    type: 'CLICK',
+                    payload: data
+                })
                 setSignUpPage({
                     userName: '',
                     gender: '',
