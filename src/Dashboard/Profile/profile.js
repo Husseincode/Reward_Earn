@@ -5,9 +5,9 @@ import Footer from '../../RewardApp/RewardAppFooter/footer'
 import { details } from '../../RewardApp/Data/data'
 import './profile.css'
 import LoadingScreen from '../../RewardApp/Loading_screen/loadingScreen'
-import dp from  '../../RewardApp/Assets/road3.jpg'
+import dp from  '../../RewardApp/Assets/road3.jpg';
 
-const Profile = ({ clickedData }) => {
+const Profile = (props) => {
     const [loading, setIsLoading] = useState(true);
     useEffect(()=>{
         setTimeout(() => {
@@ -29,7 +29,7 @@ const Profile = ({ clickedData }) => {
             <div className='info text-dark'>
                 <div>
                     <p>Name</p>
-                    <p>{clickedData}</p>
+                    <p>johnnydoe</p>
                 </div>
                 <div>
                     <p>Gender</p>

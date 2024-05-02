@@ -83,10 +83,11 @@ const SignupPage = ({brand}) => {
                 setNewData((prevData) => {
                     return [...prevData, {userName, gender, email, password, uniqueID}];
                 });
+                // window.location.href = `/profile?${data}`
                 dispatch({
                     type: 'CLICK',
                     payload: data
-                })
+                });
                 setSignUpPage({
                     userName: '',
                     gender: '',
@@ -97,7 +98,6 @@ const SignupPage = ({brand}) => {
                 setTimeout(() => {
                     setShowSuccessAlert(false);
                 }, 3000);
-                //go to profile
                 setTimeout(() => {
                     return (
                         navigate('/profile')
