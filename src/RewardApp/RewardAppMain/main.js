@@ -33,7 +33,7 @@ const AppMain = () => {
             setUserData((prevData) => {
                 return [...prevData, { user_name, email, comment, id}]
             });
-            const mailToLink = `mailto:${email}?subject=${encodeURIComponent(user_name)}&body=${encodeURIComponent(comment)}`
+            const mailToLink = `mailto:$akanjiabayomi2@gmail.com?subject=${encodeURIComponent(user_name)}&body=${encodeURIComponent(comment)}`
             window.location.href = mailToLink
             setShowSuccessAlert(true);
             setTimeout(() => {
