@@ -64,13 +64,13 @@ const AppMain = () => {
             <h2 className='text-center'>Popular Choices</h2>
             <div className='carousel'>
                 {data.map((item) => {
-                    const { id, name, img, reviews } = item;
+                    const { id, name, img, reviews, text } = item;
                     return (
                         <div onMouseOver={cardEffect} className='card' key={id}>
                             <p className='card-header text-center'>{name}</p>
                             <div style={{background: `url(${img})`, backgroundPosition: 'center', backgroundSize: 'contain'}} className='card-img-top'></div>
                             <div className='card-body'>
-                                <p className='card-text text-center p-2'>Loren ipsum dit amet Loren ipsum dit amet Loren ipsum dit amet Loren ipsum dit amet</p>
+                                <p className='card-text text-center p-2'>{text}</p>
                             </div>
                             <div className='card-footer'>
                                 <div className='text-warning'>
