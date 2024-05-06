@@ -3,6 +3,7 @@ import './RewardHeader.css';
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import img from '../Assets/katab.svg'
 
 /**
  * @AppHeader - This returns the page of the header.
@@ -25,8 +26,8 @@ const AppHeader = ({name}) => {
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
-                <h3>{name}</h3>
-                <div className="optns text-secondary">
+                <img src={img}/>
+                <div className="optns">
                     <span title={title.home}>{title.home}</span>
                     <span title={title.about}>{title.about}</span>
                     <span title={title.contact}>{title.contact}</span>
