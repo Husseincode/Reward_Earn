@@ -11,7 +11,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 const LoadingPage = () => {
     return (
         <div className='loading'>
-            <FontAwesomeIcon icon={faSpinner}/>
+            <FontAwesomeIcon style={{fontSize: '50px'}} icon={faSpinner} spin/>
         </div>
     );
 };
