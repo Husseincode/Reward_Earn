@@ -22,7 +22,7 @@ const AppHeader = ({name}) => {
         <>
         <Helmet>
             <title>{name}</title>
-            <link rel="icon" type="image/png" href="favicon.png"/>
+            <link rel="icon" type="image/png" href={img}/>
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
@@ -33,7 +33,7 @@ const AppHeader = ({name}) => {
                     <span title={title.contact}>{title.contact}</span>
                     <span title={title.dashboard}>{title.dashboard}</span>
                     <span title={title.user}>
-                        <FontAwesomeIcon className="text-primary user" icon={faUserCircle}/>
+                        <FontAwesomeIcon className="text-dark user" icon={faUserCircle}/>
                     </span>
                 </div>
                 <button className="btn">
