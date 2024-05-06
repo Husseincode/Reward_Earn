@@ -1,0 +1,21 @@
+/* This is the styling of the notification */
+
+/*
+This is the media screen for mobile devices (up to 767px)
+*/
+@media screen and (max-width: 767px){}
+
+/*
+This is the media screen for tablets (768px - 991px)
+*/
+@media screen and (min-width:768px) and (max-width: 991px){}
+
+/*
+This is the media screen for laptops(992px - 1199px)
+*/
+@media screen and (min-width:992px) and (max-width: 1199px){}
+
+/*
+This is the media screen for desktops (1200px and above)
+*/
+@media screen and (min-width: 1200px){}
