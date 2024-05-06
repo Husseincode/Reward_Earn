@@ -1,7 +1,8 @@
 import React from "react";
+import './addPage.css'
 
 const AddPage = () => {
-    return (<div></div>)
+    return (<div className="addPage"></div>)
 };
 
-return AddPage;
+export default AddPage;

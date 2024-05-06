@@ -3,7 +3,8 @@ import './RewardHeader.css';
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import img from '../Assets/logo.970e3778.svg'
+import img from '../Assets/logo.970e3778.svg';
+import AddPage from "../AddUpPage/addPage";
 
 /**
  * @AppHeader - This returns the page of the header.
@@ -41,6 +42,7 @@ const AppHeader = ({name}) => {
                 </button>
             </nav>
         </header>
+        <AddPage/>
         </>
     )
 }

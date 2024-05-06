@@ -1,0 +1,31 @@
+/* Add Page CSS*/
+.addPage{
+    width: 100%;
+    height: 80vh;
+    background: url('../../RewardApp/Assets/city.avif');
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    filter: brightness(40%);
+    border: 1px solid lightgrey;
+}
+
+/*
+This is the media screen for mobile devices (up to 767px)
+*/
+@media screen and (max-width: 767px){}
+
+/*
+This is the media screen for tablets (768px - 991px)
+*/
+@media screen and (min-width:768px) and (max-width: 991px){}
+
+/*
+This is the media screen for laptops(992px - 1199px)
+*/
+@media screen and (min-width:992px) and (max-width: 1199px){}
+
+/*
+This is the media screen for desktops (1200px and above)
+*/
+@media screen and (min-width: 1200px){}
