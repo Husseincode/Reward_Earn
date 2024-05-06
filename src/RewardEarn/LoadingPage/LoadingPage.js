@@ -1,7 +1,7 @@
 import React from "react";
 import './LoadingPage.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from '@fortawesome/free-brands-svg-icons';
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * @LoadingPage - This function returns the loading screen of a web page
