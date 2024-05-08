@@ -23,7 +23,6 @@ const AppHeader = ({name}) => {
         <>
         <Helmet>
             <title>{name}</title>
-            <link rel="icon" type="image/png" href={img}/>
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
@@ -42,7 +41,7 @@ const AppHeader = ({name}) => {
                 </button>
             </nav>
         </header>
-        <AddPage/>
+        <AddPage name={name}/>
         </>
     )
 }

@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
     object-fit: fill;
-    filter: brightness(40%);
+    filter: brightness(30%);
     border: 1px solid lightgrey;
 }
 .text{
@@ -15,6 +15,10 @@
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
+}
+.text hr{
+    margin: 0px 80px;
+    border: 2px solid white;
 }
 .btn-light{
     margin: 10px 0px 0px;

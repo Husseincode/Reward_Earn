@@ -1,7 +1,7 @@
-import bus from '../Assets/Assets/bus.jpg'
-import city from '../Assets/Assets/cityExplorer.jpg'
-import travel from '../Assets/Assets/highway.jpg'
-import lounge from '../Assets/Assets/track4.png'
+import bus from '../Assets/bus.jpg'
+import city from '../Assets/cityExplorer.jpg'
+import travel from '../Assets/highway.jpg'
+import lounge from '../Assets/track4.png'
 
 const data = [
     {
@@ -42,9 +42,8 @@ const data = [
         Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
     }
 ]
-
-const data2 = {
-    name: 'Katab Reward'
+const details = {
+    appName: 'Earn Reward',
 }
 
-export { data, data2 }
+export { data, details }

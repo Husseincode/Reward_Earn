@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AppHeader from '../RewardHeader/RewardHeader';
 import AppMain from '../RewardMain/RewardMain';
 import AppFooter from '../RewardFooter/RewardFooter';
-import { data } from '../WebData/data';
+import { data2 } from '../WebData/data';
 import LoadingPage from '../LoadingPage/LoadingPage';
 
 /**
@@ -27,9 +27,9 @@ const App = () => {
     }
     return (
         <>
-        <AppHeader {...data}/>
-        <AppMain {...data}/>
-        <AppFooter {...data}/>
+        <AppHeader {...data2}/>
+        <AppMain {...data2}/>
+        <AppFooter {...data2}/>
         </>
     )
 }
