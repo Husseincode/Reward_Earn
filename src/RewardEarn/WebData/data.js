@@ -5,7 +5,7 @@
  */
 
 export const data = {
-    name: 'Earn Reward',
+    name: 'Katab Reward',
     contact: {
         facebook: '',
         whatsapp: '',

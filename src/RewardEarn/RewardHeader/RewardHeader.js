@@ -17,7 +17,7 @@ const AppHeader = ({name}) => {
         about: 'About',
         contact: 'Contact',
         dashboard: 'Dashboard',
-        user: 'User'
+        user: 'Sign In'
     })
     return (
         <>
@@ -27,7 +27,7 @@ const AppHeader = ({name}) => {
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
-                <img src={img}/>
+                <img title={name} src={img}/>
                 <div className="optns">
                     <span title={title.home}>{title.home}</span>
                     <span title={title.about}>{title.about}</span>

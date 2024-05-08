@@ -1,9 +1,20 @@
 /* This is the styling of the web application main */
-
+:root{
+    --border: 1px dashed lightgrey
+}
+main > section> div{
+    padding: 20px;
+}
 /*
 This is the media screen for mobile devices (up to 767px)
 */
-@media screen and (max-width: 767px){}
+@media screen and (max-width: 767px){
+    main > section{
+        width: 100%;
+        min-height: 300px;
+        /* border: var(--border); */
+    }
+}
 
 /*
 This is the media screen for tablets (768px - 991px)
@@ -18,4 +29,14 @@ This is the media screen for laptops(992px - 1199px)
 /*
 This is the media screen for desktops (1200px and above)
 */
-@media screen and (min-width: 1200px){}
+@media screen and (min-width: 1200px){
+    main{
+        display: grid;
+        place-content: center;
+    }
+    main > section{
+        width: 800px;
+        min-height: 300px;
+        /* border: var(--border); */
+    }
+}
