@@ -8,4 +8,3 @@ import Navigate from './RewardEarn/PageNavigation/Navigate';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(<Navigate/>);
-// root.render(<App/>);

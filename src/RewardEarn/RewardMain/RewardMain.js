@@ -22,7 +22,7 @@ const AppMain = ({name}) => {
                 </div>
                 <hr/>
                 <div>
-                    <h2>Popular Choices</h2>
+                    <h2 className="mb-3">Popular Choices</h2>
                     <div className="all_cards">
                     {
                         data.map((item) => {
@@ -45,6 +45,9 @@ const AppMain = ({name}) => {
                     </div>
                     <hr/>
                 </div>
+                <form>
+                    
+                </form>
             </section>
         </main>
     )
