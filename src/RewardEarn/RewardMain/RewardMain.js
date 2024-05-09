@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import './RewardMain.css'
 import { data } from "../WebData/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import k from '../Assets/k.png'
+import Notify from "../Notification/Notification";
+import reducer from "../Reducer/useReducer";
+import { initialData } from "../Reducer/initialData";
 
 /**
  * @AppMain - This returns the page of the main.
@@ -15,11 +17,10 @@ const AppMain = ({name}) => {
         name: '',
         comment: '',
         email: '',
-    })
+    });
     const [userData, setUserData] = useState([]);
-    const [showFailureAlert, setShowFailureAlert] = useState(false);
-    const [showSuccessAlert, setShowSuccessAlert] = useState(false);
-    const [postComment, setPostComment] = useState();
+    const [state, dispatch] = useReducer(reducer, initialData);
+    // const [postComment, setPostComment] = useState();
 
     const handleFormData = (e) => {
         const { name, value } = e.target;
@@ -38,13 +39,22 @@ const AppMain = ({name}) => {
             setUserData((prevData)=>{
                 return [...prevData, data];
             });
+            dispatch({type: 'SUCCESS'});
+            setTimeout(() => {
+                dispatch({type: 'REMOVE_NOTIFICATION'});
+            }, 3000);
             setUserDetails({
                 name: '',
                 comment: '',
                 email: '',
             })
         }
-        console.warn(userData)
+        else{
+            dispatch({type: 'ERROR'});
+            setTimeout(() => {
+                dispatch({type: 'REMOVE_NOTIFICATION'})
+            }, 3000);
+        }
     };
 
     const Hover = () => {
@@ -116,6 +126,8 @@ const AppMain = ({name}) => {
                     </form>
                 </div>
             </section>
+            {state.failureAlert && <Notify message={'Fill in the required fields'} color={'darkgoldenrod'}/>}
+            {state.successAlert && <Notify message={'Sent'} color={'teal'}/>}
         </main>
     )
 }

@@ -11,7 +11,7 @@ import './Notification.css';
  */
 const Notify = ({message, color}) => {
     return (
-        <div style={{border: `2px solid ${color}`, color: `${color}`}}>{message}</div>
+        <div className="notify" style={{border: `2px solid ${color}`, color: `${color}`}}>{message}</div>
     );
 };
 
