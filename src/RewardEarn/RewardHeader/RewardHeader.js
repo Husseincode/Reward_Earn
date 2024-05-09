@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './RewardHeader.css';
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,13 +12,13 @@ import img from '../Assets/logo.970e3778.svg';
  * @returns: The App Header Component
  */
 const AppHeader = ({name}) => {
-    const [title, setTitle] = useState({
+    const title = {
         home: 'Home',
         about: 'About',
         contact: 'Contact',
         dashboard: 'Dashboard',
         user: 'Sign In'
-    })
+    }
     return (
         <>
         <Helmet>
@@ -26,7 +26,7 @@ const AppHeader = ({name}) => {
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
-                <img title={name} src={img}/>
+                <img alt={name} title={name} src={img}/>
                 <div className="optns">
                     <span title={title.home}>{title.home}</span>
                     <span title={title.about}>{title.about}</span>

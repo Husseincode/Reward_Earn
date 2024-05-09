@@ -6,7 +6,7 @@ const AddPage = ({name}) => {
         <>
         <div className="addPage"></div>
         <div className="text text-white text-center">
-            <h1>{name}<hr className="line"/></h1>
+            <h1>{name}<hr style={{border: '2px solid white'}} className="line"/></h1>
             <button title="sign up" className="btn btn-light">Sign Up</button>
         </div>
         </>
