@@ -76,9 +76,9 @@ const AppMain = ({name}) => {
                             const { id, name, img, reviews, text } = item;
                             return (
                                 <div onMouseOver={Hover} title={name} className="card" key={id}>
-                                    <h5 className="card-header text-center">{name}</h5>
                                     <div style={{background: `url(${img})`, height: '200px', backgroundSize: 'cover', backgroundPosition: 'center'}} className="card-img-top"></div>
                                     <div className="card-body">
+                                        <h5 className="text-secondary">{name}</h5>
                                         <p>{text}</p>
                                     </div>
                                     <div style={{display: "flex", justifyContent: "space-between"}} className="card-footer">

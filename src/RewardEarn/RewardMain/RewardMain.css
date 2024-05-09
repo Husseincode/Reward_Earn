@@ -84,5 +84,6 @@ This is the media screen for desktops (1200px and above)
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
