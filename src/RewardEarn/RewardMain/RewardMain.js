@@ -61,10 +61,10 @@ const AppMain = ({name}) => {
         let all_cards = document.querySelectorAll('.card');
         all_cards.forEach(item => {
             item.addEventListener('mouseover', () => {
-                item.classList.add('shadow-sm');
+                item.classList.add('shadow');
             });
             item.addEventListener('mouseout', () => {
-                item.classList.remove('shadow-sm')
+                item.classList.remove('shadow')
             })
         })
     };
@@ -76,8 +76,8 @@ const AppMain = ({name}) => {
                     <p className="mt-3 mb-0">Discover a variety of rewards for your travel activities, from flights to hotel stays. Start earning today! 
                         Our dedication to providing top-notch rewards and personalized service sets us apart. Your satisfaction is our priority.
                     </p>
+                    <hr/>
                 </div>
-                <hr/>
                 <div>
                     <h2 className="mb-3">Popular Choices</h2>
                     <div className="all_cards">

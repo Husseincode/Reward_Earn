@@ -37,10 +37,14 @@ hr{
     width: 100%;
     resize: none;
     padding: 10px;
+    border: 1px solid lightgrey;
 }
 .fields > button{
     width: 200px;
 }
+/* ::-webkit-scrollbar{
+    width: 10px;
+} */
 /*
 This is the media screen for mobile devices (up to 767px)
 */
@@ -94,7 +98,7 @@ This is the media screen for desktops (1200px and above)
         place-content: center;
     }
     main > section{
-        width: 900px;
+        width: 1000px;
         min-height: 300px;
         /* border: var(--border); */
     }

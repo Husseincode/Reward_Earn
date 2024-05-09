@@ -1,9 +1,63 @@
 /* This is the styling of the web application footer */
+:root{
+    --border: 1px solid lightgrey;
+}
+footer{
+    display: grid;
+    place-content: center;
+    /* height: 300px; */
+}
+footer > section{
+    width: 1000px;
+    /* height: 250px; */
+    padding: 10px;
+    /* margin: 20px 0px; */
+    display: grid;
+    place-content: center;
+    /* border: var(--border); */
+}
+.social_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social_icons > .icon{
+    margin-left: 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.image{
+    height: 50px;
+    width: 300px;
+}
 
 /*
 This is the media screen for mobile devices (up to 767px)
 */
-@media screen and (max-width: 767px){}
+@media screen and (max-width: 767px){
+    footer{
+        width: 100%;
+    }
+    footer > section{
+        width: 100%;
+        border: none;
+        /* border: var(--border); */
+    }
+    .social_icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .social_icons > .icon{
+        /* margin-left: 10px; */
+        font-size: 17px;
+        cursor: pointer;
+    }
+    .image{
+        width: 150px;
+        height: 50px;
+    }
+}
 
 /*
 This is the media screen for tablets (768px - 991px)
