@@ -19,6 +19,27 @@ hr{
 }
 .card{
     cursor: pointer;
+    transition: 1s;
+}
+.form-section{
+    padding: 50px 30px;
+    width: 100%;
+    display: grid;
+    /* margin: 0px 10px 20px; */
+}
+.fields{
+    display: grid;
+}
+.fields > label > textarea{
+    height: 300px;
+}
+.fields > label > textarea, input{
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+.fields > button{
+    width: 200px;
 }
 /*
 This is the media screen for mobile devices (up to 767px)
