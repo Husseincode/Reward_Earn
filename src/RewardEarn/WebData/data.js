@@ -36,7 +36,7 @@ const data = [
         id: 4,
         name: 'City Explorer',
         stars: 5,
-        reviews: '3241',
+        reviews: '3,241',
         img: city,
         text: `Become a city explorer with the rewards you earn from your transactions.
         Redeem your points for exclusive experiences and adventures in vibrant cities around the world`

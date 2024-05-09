@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import AppHeader from '../RewardHeader/RewardHeader';
+// import AppHeader from '../RewardHeader/RewardHeader';
 import AppMain from '../RewardMain/RewardMain';
 import AppFooter from '../RewardFooter/RewardFooter';
 import { data2 } from '../WebData/data';
 import LoadingPage from '../LoadingPage/LoadingPage';
+import LandingPage from '../RewardHeader/MixedHeaderPage';
 
 /**
  * @App - This function shows the website page.
@@ -27,7 +28,7 @@ const App = () => {
     }
     return (
         <>
-        <AppHeader {...data2}/>
+        <LandingPage {...data2}/>
         <AppMain {...data2}/>
         <AppFooter {...data2}/>
         </>
