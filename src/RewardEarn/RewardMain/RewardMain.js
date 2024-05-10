@@ -6,6 +6,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Notify from "../Notification/Notification";
 import reducer from "../Reducer/useReducer";
 import { initialData } from "../Reducer/initialData";
+import k from '../Assets/k.png'
 
 /**
  * @AppMain - This returns the page of the main.
@@ -91,9 +92,9 @@ const AppMain = ({name}) => {
                                         <h5 className="text-secondary">{name}</h5>
                                         <p>{text}</p>
                                     </div>
-                                    <div style={{display: "flex", justifyContent: "space-between"}} className="card-footer">
-                                        <FontAwesomeIcon className="text-warning" icon={faStar}/>
-                                        <p>Reviews <span>{reviews}</span></p>
+                                    <div style={{display: "flex", justifyContent: "space-between", alignItems: 'center'}} className="card-footer">
+                                        <img src={k} alt="k" height={'30px'} />
+                                        <span>Reviews <span>{reviews}</span></span>
                                     </div>
                                 </div>
                             )

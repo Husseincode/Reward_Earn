@@ -3,7 +3,7 @@ import './RewardHeader.css';
 import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import img from '../Assets/logo.970e3778.svg';
+import Logo from "./Logo";
 // import AddPage from "../AddUpPage/addPage";
 
 /**
@@ -26,7 +26,7 @@ const AppHeader = ({name}) => {
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
-                <img alt={name} title={name} src={img}/>
+                <Logo/>
                 <div className="optns">
                     <span title={title.home}>{title.home}</span>
                     <span title={title.about}>{title.about}</span>

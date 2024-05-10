@@ -5,7 +5,7 @@ import AppHeader from "./RewardHeader";
 const LandingPage = ({name}) => {
     return (
         <>
-        <AppHeader/>
+        <AppHeader name={name}/>
         <AddPage name={name}/>
         </>
     )

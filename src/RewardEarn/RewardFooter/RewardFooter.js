@@ -3,7 +3,7 @@ import './RewardFooter.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import img from '../Assets/logo.970e3778.svg'
+import Logo from "../RewardHeader/Logo";
 
 /**
  * @AppFooter - This returns the page of the footer.
@@ -14,9 +14,8 @@ const AppFooter = ({name}) => {
     return (
         <footer className="bg-dark text-secondary text-center">
             <section>
-                {/* <h3>{name}</h3> */}
-                <img className="mb-2 image" src={img} alt={name}/>
-                <div className="social_icons">
+                <Logo/>
+                <div className="social_icons mt-3">
                     <FontAwesomeIcon title="Github" className="icon" icon={faGithub}/>
                     <FontAwesomeIcon title="Facebook" className="icon" icon={faFacebook}/>
                     <FontAwesomeIcon title="Twitter" className="icon" icon={faXTwitter}/>
