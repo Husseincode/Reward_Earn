@@ -44,7 +44,7 @@ const data = [
 ]
 
 const data2 = {
-    name: 'Katab Reward'
+    name: 'King\'s Reward'
 }
 
 export { data, data2 }

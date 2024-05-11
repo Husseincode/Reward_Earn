@@ -65,14 +65,17 @@ This is the media screen for mobile devices (up to 767px)
 This is the media screen for tablets (768px - 991px)
 */
 @media screen and (min-width:768px) and (max-width: 991px){
+    main > section{
+        width: 100%;
+    }
     .all_cards{
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
-    .form-section{
+    /* .form-section{
         padding: 50px 30px;
-    }
+    } */
 }
 
 /*
