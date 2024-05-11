@@ -61,6 +61,10 @@ This is the media screen for mobile devices (up to 767px)
     }
     .icon{
         font-size: 20px;
+        padding-top: 2px;
+    }
+    .AppHeader > nav > button{
+        border: 2px solid lightgrey;
     }
 }
 
