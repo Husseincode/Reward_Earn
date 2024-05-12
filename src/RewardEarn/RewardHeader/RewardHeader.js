@@ -37,9 +37,9 @@ const AppHeader = ({name}) => {
                         <FontAwesomeIcon className="text-dark user" icon={faUserCircle}/>
                     </Link>
                 </div>
-                <button className="btn">
+                <Link to={'/dashboard'} className="btn">
                     <FontAwesomeIcon className="icon" icon={faBars}/>
-                </button>
+                </Link>
             </nav>
         </header>
         {/* <AddPage name={name}/> */}

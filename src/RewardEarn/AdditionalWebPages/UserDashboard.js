@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './userDashboard.css';
 import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,13 +7,28 @@ import { faArrowUp, faBell, faBus, faDollarSign, faHistory, faHome, faUserCircle
 import { Link } from 'react-router-dom';
 import { name } from './dummyName';
 import { dummyData } from './dummyData';
-import AppFooter from '../RewardFooter/RewardFooter';
+// import AppFooter from '../RewardFooter/RewardFooter';
+import LoadingPage from '../LoadingPage/LoadingPage';
+import { dummyTransactionData } from './dummyTransactionData';
 
 const UserDashBoard = () => {
+    const [loading, setisLoading] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(() => {
+            setisLoading(false);
+        }, 3000);
+    },[loading]);
+
+    if(loading){
+        return (
+            <LoadingPage/>
+        )
+    }
     return (
         <React.Fragment>
             {/* <AppHeader/> */}
-            <section className='body'>
+            <main className='body'>
                 <div className='firstSection'>
                     <div className='logo'>
                         <Logo/>
@@ -40,22 +55,49 @@ const UserDashBoard = () => {
                     <div className='balances'>
                         {
                             dummyData.map(item => {
-                                const { title, liquidity, history } = item;
+                                const { id, title, liquidity, history } = item;
                                 return (
-                                    <div className='card'>
+                                    <div key={id} title={title} className='card'>
                                         <p className='text-secondary'>{title}</p>
                                         <h4 className='fw-bolder'><FontAwesomeIcon icon={faDollarSign}/> {liquidity}</h4>
-                                        <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-warning' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
+                                        <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-warning fw-bolder' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
                                     </div>
                                 );
                                 
                             })
                         }
                     </div>
-                    <div className='history card'></div>
+                    <div className='history card text-secondary'>
+                        <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
+                        <table className='card text-secondary'>
+                            <tr className='bg-light text-left'>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Date & time</th>
+                                <th>Transaction ID</th>
+                                <th>Action</th>
+                            </tr>
+                            {
+                                dummyTransactionData.map(item => {
+                                    const { transactionID, transactionType, location, amount, status, dateAndTime, action, color } = item;
+                                    return (<tr key={transactionID} className='text-left'>
+                                        <td>{transactionType}</td>
+                                        <td>{location}</td>
+                                        <td>{amount}</td>
+                                        <td style={{color: `${color}`}}>{status}</td>
+                                        <td>{dateAndTime}</td>
+                                        <td>{transactionID}</td>
+                                        <td className='text-warning'>{action}</td>
+                                    </tr>)
+                                })
+                            }
+                        </table>
+                    </div>
                 </div>
-            </section>
-            <AppFooter/>
+            </main>
+            {/* <AppFooter/> */}
         </React.Fragment>
     )
 }
