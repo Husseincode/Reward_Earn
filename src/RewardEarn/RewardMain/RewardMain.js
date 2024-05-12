@@ -1,8 +1,6 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useRef, useState } from "react";
 import './RewardMain.css'
 import { data } from "../WebData/data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Notify from "../Notification/Notification";
 import reducer from "../Reducer/useReducer";
 import { initialData } from "../Reducer/initialData";
@@ -21,6 +19,7 @@ const AppMain = ({name}) => {
     });
     const [userData, setUserData] = useState([]);
     const [state, dispatch] = useReducer(reducer, initialData);
+    const inputRef = useRef(null);
     // const [postComment, setPostComment] = useState();
 
     const handleFormData = (e) => {
@@ -31,24 +30,33 @@ const AppMain = ({name}) => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         if(userDetails.name && userDetails.email && userDetails.comment){
-            let data = {
-                id: new Date().getTime().toString(),
-                name: userDetails.name,
-                email: userDetails.email,
-                comment: userDetails.comment,
+            if (userDetails.email.includes('@')){
+                let data = {
+                    id: new Date().getTime().toString(),
+                    name: userDetails.name,
+                    email: userDetails.email,
+                    comment: userDetails.comment,
+                }
+                setUserData((prevData)=>{
+                    return [...prevData, data];
+                });
+                dispatch({type: 'SUCCESS'});
+                setTimeout(() => {
+                    dispatch({type: 'REMOVE_NOTIFICATION'});
+                }, 3000);
+                setUserDetails({
+                    name: '',
+                    comment: '',
+                    email: '',
+                });
             }
-            setUserData((prevData)=>{
-                return [...prevData, data];
-            });
-            dispatch({type: 'SUCCESS'});
-            setTimeout(() => {
-                dispatch({type: 'REMOVE_NOTIFICATION'});
-            }, 3000);
-            setUserDetails({
-                name: '',
-                comment: '',
-                email: '',
-            })
+            else{
+                dispatch({type: 'INCORRECT_EMAIL'});
+                inputRef.current.focus();
+                setTimeout(()=>{
+                    dispatch({type: 'REMOVE_NOTIFICATION'});
+                }, 3000);
+            }
         }
         else{
             dispatch({type: 'ERROR'});
@@ -120,7 +128,7 @@ const AppMain = ({name}) => {
                             </label>
                             <label htmlFor='email'>
                                 Email * <br/>
-                                <input name="email" onChange={handleFormData} value={userDetails.email} placeholder='johndoe@gmail.com' type='email' id='email' required/>
+                                <input ref={inputRef} name="email" onChange={handleFormData} value={userDetails.email} placeholder='johndoe@gmail.com' type='email' id='email' required/>
                             </label>
                             <button onClick={handleFormSubmit} className='btn postComment btn-dark rounded-0 mt-3'>POST COMMENT</button>
                         </div>
@@ -129,6 +137,7 @@ const AppMain = ({name}) => {
             </section>
             {state.failureAlert && <Notify message={'Fill in the required fields'} color={'darkgoldenrod'}/>}
             {state.successAlert && <Notify message={'Sent'} color={'teal'}/>}
+            {state.faultyEmail && <Notify message={'Invalid Email'} color={'maroon'}/>}
         </main>
     )
 }

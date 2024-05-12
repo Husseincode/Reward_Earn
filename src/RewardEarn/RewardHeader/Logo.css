@@ -1,9 +1,10 @@
 .logo_styling{
     display: flex;
+    height: 30px;
 }
 .logo_styling > span{
     font-family:Georgia, 'Times New Roman', Times, serif;
-    margin-top: 13px;
+    margin-top: 10px;
     font-weight: lighter;
-    font-size: 20px;
+    
 }

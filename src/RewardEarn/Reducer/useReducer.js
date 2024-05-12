@@ -15,6 +15,13 @@ const reducer = (state, action) => {
         return {
             successAlert: false,
             failureAlert: false,
+            faultyEmail: false,
+        }
+    }
+    else if (action.type === 'INCORRECT_EMAIL'){
+        return {
+            ...state,
+            faultyEmail: true,
         }
     }
     return state;

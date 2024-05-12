@@ -32,7 +32,7 @@ const AppHeader = ({name}) => {
                     <Link title={title.home} className="lnk text-dark">{title.home}</Link>
                     <Link title={title.contact} className="lnk text-dark">{title.contact}</Link>
                     <Link title={title.about} className="lnk text-dark">{title.about}</Link>
-                    <Link title={title.dashboard} className="lnk text-dark">{title.dashboard}</Link>
+                    <Link to={'/dashboard'} title={title.dashboard} className="lnk text-dark">{title.dashboard}</Link>
                     <Link className="lnk" title={title.user}>
                         <FontAwesomeIcon className="text-dark user" icon={faUserCircle}/>
                     </Link>
