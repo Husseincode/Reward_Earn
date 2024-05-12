@@ -75,19 +75,21 @@ const UserDashBoard = () => {
                                 <th>Location</th>
                                 <th>Amount</th>
                                 <th>Status</th>
-                                <th>Date & time</th>
+                                <th>Date</th>
+                                <th>Time</th>
                                 <th>Transaction ID</th>
                                 <th>Action</th>
                             </tr>
                             {
                                 dummyTransactionData.map(item => {
-                                    const { transactionID, transactionType, location, amount, status, dateAndTime, action, color } = item;
+                                    const { transactionID, transactionType, location, amount, status, date, time, action, color } = item;
                                     return (<tr key={transactionID} className='text-left'>
                                         <td>{transactionType}</td>
                                         <td>{location}</td>
                                         <td>{amount}</td>
                                         <td style={{color: `${color}`}}>{status}</td>
-                                        <td>{dateAndTime}</td>
+                                        <td>{date}</td>
+                                        <td>{time}</td>
                                         <td>{transactionID}</td>
                                         <td className='text-warning'>{action}</td>
                                     </tr>)

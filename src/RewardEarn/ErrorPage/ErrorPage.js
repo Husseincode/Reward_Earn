@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './error.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import './error.css';
 
 const ErrorPage = () => {
+    const goBack = () => {
+        window.history.back();
+    }
     return (
         <div className='error text-center'>
             <h3>Error 404</h3>
-            <Link style={{fontSize: '10px'}} className='btn btn-dark btn-sm' to={'/'}>Back to home <FontAwesomeIcon icon={faHome}/></Link>
+            <button onClick={goBack} className='btn btn-sm btn-dark'>Go back</button>
         </div>
     )
 }
 
-export default ErrorPage
+export default ErrorPage;
