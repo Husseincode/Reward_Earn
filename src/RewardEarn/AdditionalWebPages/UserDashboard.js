@@ -48,8 +48,8 @@ const UserDashBoard = () => {
                             <span className='text-secondary'>Dashboard overview</span>
                         </div>
                         <div>
-                            <FontAwesomeIcon className='icon' icon={faBell}/>
-                            <FontAwesomeIcon className='icon' icon={faUserCircle}/>
+                            <FontAwesomeIcon title='notification' className='icon' icon={faBell}/>
+                            <FontAwesomeIcon title={name} className='icon user_icon' icon={faUserCircle}/>
                         </div>
                     </div>
                     <div className='balances'>
@@ -58,9 +58,9 @@ const UserDashBoard = () => {
                                 const { id, title, liquidity, history } = item;
                                 return (
                                     <div key={id} title={title} className='card'>
-                                        <p className='text-secondary'>{title}</p>
+                                        <p>{title}</p>
                                         <h4 className='fw-bolder'><FontAwesomeIcon icon={faDollarSign}/> {liquidity}</h4>
-                                        <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-warning fw-bolder' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
+                                        <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-secondary fw-bolder' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
                                     </div>
                                 );
                                 
@@ -83,15 +83,15 @@ const UserDashBoard = () => {
                             {
                                 dummyTransactionData.map(item => {
                                     const { transactionID, transactionType, location, amount, status, date, time, action, color } = item;
-                                    return (<tr key={transactionID} className='text-left'>
-                                        <td>{transactionType}</td>
-                                        <td>{location}</td>
-                                        <td>{amount}</td>
-                                        <td style={{color: `${color}`}}>{status}</td>
-                                        <td>{date}</td>
-                                        <td>{time}</td>
-                                        <td>{transactionID}</td>
-                                        <td className='text-warning'>{action}</td>
+                                    return (<tr title={status} key={transactionID} className='text-left'>
+                                        <td title={transactionType}>{transactionType}</td>
+                                        <td title={location}>{location}</td>
+                                        <td title={amount}>{amount}</td>
+                                        <td title={status} style={{color: `${color}`}}>{status}</td>
+                                        <td title={date}>{date}</td>
+                                        <td title={time}>{time}</td>
+                                        <td title={transactionID}>{transactionID}</td>
+                                        <td title={action} className='text-warning'>{action}</td>
                                     </tr>)
                                 })
                             }

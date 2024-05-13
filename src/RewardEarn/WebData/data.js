@@ -44,7 +44,7 @@ const data = [
 ]
 
 const data2 = {
-    name: 'King\'s Reward'
+    name: 'King\'s Rewards'
 }
 
 export { data, data2 }

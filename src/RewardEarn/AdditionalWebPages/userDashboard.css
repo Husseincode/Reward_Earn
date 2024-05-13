@@ -71,11 +71,26 @@
     justify-content: space-between;
     /* border: var(--border); */
 }
+.balances > div{
+    color: black;
+    background: white;
+}
+.balances > div > p{
+    color: grey;
+}
 .balances > div:first-child{
     margin-left: 0px;
 }
+.balances > div:last-child{
+    color: white;
+    background: url('../Assets/coin.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(90%);
+}
 .balances > div:last-child > p{
     /* border: var(--border); */
+    color: white;
     padding: 5px;
     border-radius: 10px;
 }
@@ -109,6 +124,13 @@ th{
 td, th{
     text-align: left;
     width: 120px;
+}
+.icon{
+    padding: 2px;
+}
+.user_icon{
+    border: 2px solid black;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 767px){
