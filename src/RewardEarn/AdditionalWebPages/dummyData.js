@@ -7,6 +7,7 @@ export const dummyData = [
         liquidity: '500.00 miles',
         history: 'View History',
         img: '',
+        url: '/transaction'
     },
     {
         id: 2,
@@ -14,6 +15,7 @@ export const dummyData = [
         liquidity: '500.00 miles',
         history: 'View History',
         img: '',
+        url: '/transaction'
     },
     {
         id: 3,
@@ -21,5 +23,6 @@ export const dummyData = [
         liquidity: '1.2 miles',
         history: 'Claim Reward',
         img: img,
+        url: '/transaction'
     }
 ]
