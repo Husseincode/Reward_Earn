@@ -2,6 +2,8 @@ import bus from '../Assets/Assets/bus.jpg'
 import city from '../Assets/Assets/cityExplorer.jpg'
 import travel from '../Assets/Assets/highway.jpg'
 import lounge from '../Assets/Assets/track4.png'
+import img4 from '../Assets/Assets/Gift-present.jpg'
+import img5 from '../Assets/Assets/gifl.webp'
 
 const data = [
     {
@@ -38,6 +40,24 @@ const data = [
         stars: 5,
         reviews: '3,241',
         img: city,
+        text: `Become a city explorer with the rewards you earn from your transactions.
+        Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
+    },
+    {
+        id: 5,
+        name: 'Double Rewards',
+        stars: 5,
+        reviews: '2,241',
+        img: img4,
+        text: `Become a city explorer with the rewards you earn from your transactions.
+        Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
+    },
+    {
+        id: 6,
+        name: 'Go Premium',
+        stars: 5,
+        reviews: '1,341',
+        img: img5,
         text: `Become a city explorer with the rewards you earn from your transactions.
         Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
     }

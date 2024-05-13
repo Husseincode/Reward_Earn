@@ -74,6 +74,8 @@
 .balances > div{
     color: black;
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 .balances > div > p{
     color: grey;
@@ -91,7 +93,7 @@
 .balances > div:last-child > p{
     /* border: var(--border); */
     color: white;
-    padding: 5px;
+    /* padding: 5px; */
     border-radius: 10px;
 }
 .balances > div{
@@ -107,8 +109,9 @@
 .history > table{
     border: var(--border);
     border-radius: 10px 10px 0px 0px;
-    overflow: hidden;
+    overflow: scroll;
     width: 100%;
+    flex-grow: 1;
 }
 tr{
     display: flex;

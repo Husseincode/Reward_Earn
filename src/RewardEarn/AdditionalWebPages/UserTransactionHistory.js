@@ -11,7 +11,7 @@ import { dummyData } from './dummyData';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
 
-const UserDashBoard = () => {
+const UserTransactionHistory = () => {
     const [loading, setisLoading] = useState(true);
 
     useEffect(()=>{
@@ -52,21 +52,21 @@ const UserDashBoard = () => {
                             <FontAwesomeIcon title={name} className='icon user_icon' icon={faUserCircle}/>
                         </div>
                     </div>
-                    <div className='balances'>
+                    {/* <div className='balances'>
                         {
                             dummyData.map(item => {
                                 const { id, title, liquidity, history } = item;
                                 return (
                                     <div key={id} title={title} className='card'>
                                         <p>{title}</p>
-                                        <h5 className='fw-bolder'>{liquidity}</h5>
+                                        <h4 className='fw-bolder'><FontAwesomeIcon icon={faDollarSign}/> {liquidity}</h4>
                                         <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-secondary fw-bolder' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
                                     </div>
                                 );
                                 
                             })
                         }
-                    </div>
+                    </div> */}
                     <div className='history card text-secondary'>
                         <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
                         <table className='card text-secondary'>
@@ -104,4 +104,4 @@ const UserDashBoard = () => {
     )
 }
 
-export default UserDashBoard;
+export default UserTransactionHistory;

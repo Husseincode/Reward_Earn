@@ -1,20 +1,21 @@
 /* Add Page CSS*/
 .addPage{
     width: 100%;
-    height: 80vh;
-    background: url('../Assets/Assets/city.avif');
+    height: 65vh;
+    background: url('../Assets/kingReward.png');
     background-position: center;
     background-size: cover;
     object-fit: fill;
-    filter: brightness(70%);
+    filter: brightness(20%);
     /* border: 1px solid lightgrey; */
 }
 .text{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     z-index: 1;
     transform: translate(-50%, -50%);
+    width: 100%;
     /* border: 1px solid lightgrey; */
 }
 .text hr{
