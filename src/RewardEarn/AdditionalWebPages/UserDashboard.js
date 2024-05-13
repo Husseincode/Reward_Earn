@@ -7,7 +7,7 @@ import { faArrowUp, faBell, faBus, faDollarSign, faHistory, faHome, faUserCircle
 import { Link } from 'react-router-dom';
 import { name } from './dummyName';
 import { dummyData } from './dummyData';
-// import AppFooter from '../RewardFooter/RewardFooter';
+import AppFooter from '../RewardFooter/RewardFooter';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
 
@@ -99,7 +99,7 @@ const UserDashBoard = () => {
                     </div>
                 </div>
             </main>
-            {/* <AppFooter/> */}
+            <AppFooter/>
         </React.Fragment>
     )
 }

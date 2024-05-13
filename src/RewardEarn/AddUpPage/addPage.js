@@ -1,10 +1,8 @@
 import React from "react";
 import './addPage.css';
 import { Link } from "react-router-dom";
-// import Logo from "../RewardHeader/Logo";
-// import img from '../Assets/CADD4443-5504-4102-992A-858EB329F62A-removebg-preview.png'
 
-const AddPage = ({name}) => {
+const AddPage = () => {
     return (
         <>
         <div className="addPage"></div>

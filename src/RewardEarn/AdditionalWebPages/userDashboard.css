@@ -17,6 +17,7 @@
     padding-bottom: 20px;
     border-bottom: var(--border);
     /* border: var(--border); */
+    
 }
 .links{
     margin-top: 30px;
@@ -45,7 +46,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    padding: 10px 20px;
+    padding: 30px 20px;
     row-gap: 20px;
 }
 .secondSection > div{
@@ -55,9 +56,11 @@
     height: 50px;
     display: flex;
     justify-content: space-between;
+    /* border: var(--border); */
+    align-items: center;
 }
 .intro > div:last-child{
-    margin: 15px;
+    margin: 0px 15px;
     display: flex;
     gap: 10px;
     font-size: 20px;
@@ -102,16 +105,16 @@
     margin-left: 10px;
 }
 .history{
-    flex-grow: 2;
-    padding: 10px 20px;
+    /* flex-grow: 2; */
+    padding: 20px;
     /* border: var(--border); */
 }
 .history > table{
     border: var(--border);
     border-radius: 10px 10px 0px 0px;
-    overflow: scroll;
+    overflow-y: hidden;
     width: 100%;
-    flex-grow: 1;
+    
 }
 tr{
     display: flex;
@@ -164,8 +167,8 @@ td, th{
         /* margin-left: 10px; */
     }
     .history{
-        flex-grow: 2;
-        height: 300px;
+        /* flex-grow: 2; */
+        /* height: 300px; */
     }
     .history > table{
         overflow: scroll;
