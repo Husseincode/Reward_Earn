@@ -11,7 +11,7 @@ const AddPage = ({name}) => {
         <div className="text text-white text-center">
             {/* <Logo/> */}
             <h3>Welcome to our Passenger Reward System, where every journey is a rewarding adventure!</h3>
-            <Link to={'sign-up'} title="sign up" className="btn btn-sm btn-warning">Sign Up</Link>
+            <Link to={'sign-up'} title="sign up" className="btn btn-sm btn-warning mt-2">Sign Up</Link>
         </div>
         </>
     )

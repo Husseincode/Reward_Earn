@@ -30,8 +30,8 @@
 This is the media screen for mobile devices (up to 767px)
 */
 @media screen and (max-width: 767px){
-    .text > img{
-        width: 320px;
+    .text{
+        padding: 0px 25px;
     }
 }
 
