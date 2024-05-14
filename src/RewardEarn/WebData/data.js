@@ -1,9 +1,9 @@
-import bus from '../Assets/Assets/bus.jpg'
-import city from '../Assets/Assets/cityExplorer.jpg'
-import travel from '../Assets/Assets/highway.jpg'
-import lounge from '../Assets/Assets/track4.png'
-import img4 from '../Assets/Assets/Gift-present.jpg'
-import img5 from '../Assets/Assets/gifl.webp'
+import bus from '../Assets/Assets/bus.jpg';
+import city from '../Assets/Assets/cityExplorer.jpg';
+import travel from '../Assets/Assets/highway.jpg';
+import lounge from '../Assets/Assets/track4.png';
+import img4 from '../Assets/Assets/Gift-present.jpg';
+import img5 from '../Assets/Assets/gifl.webp';
 
 const data = [
     {
@@ -49,8 +49,8 @@ const data = [
         stars: 5,
         reviews: '2,241',
         img: img4,
-        text: `Become a city explorer with the rewards you earn from your transactions.
-        Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
+        text: `Exciting news! Introducing our Doubling Rewards program. Now, earn double points for every mile traveled. 
+        Get closer to perks and upgrades faster. Join now!`
     },
     {
         id: 6,
@@ -58,8 +58,8 @@ const data = [
         stars: 5,
         reviews: '1,341',
         img: img5,
-        text: `Become a city explorer with the rewards you earn from your transactions.
-        Redeem your points for exclusive experiences and adventures in vibrant cities around the world`
+        text: `Experience travel like never before with our Premium 
+        Membership. Unlock exclusive perks, priority access, and VIP treatment. Upgrade now and enjoy the journey in style!"`
     }
 ]
 

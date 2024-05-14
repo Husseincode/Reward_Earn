@@ -3,11 +3,9 @@ import './userDashboard.css';
 import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp, faBell, faBus, faDollarSign, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { name } from './dummyName';
-import { dummyData } from './dummyData';
-// import AppFooter from '../RewardFooter/RewardFooter';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
 
@@ -99,7 +97,6 @@ const UserTransactionHistory = () => {
                     </div>
                 </div>
             </main>
-            {/* <AppFooter/> */}
         </React.Fragment>
     )
 }

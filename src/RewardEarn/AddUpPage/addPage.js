@@ -9,7 +9,7 @@ const AddPage = () => {
         <div className="text text-white text-center">
             {/* <Logo/> */}
             <h3>Welcome to our Passenger Reward System, where every journey is a rewarding adventure!</h3>
-            <Link to={'sign-up'} title="sign up" className="btn btn-sm btn-warning mt-2">Sign Up</Link>
+            <Link to={'sign-in'} title="sign in" className="btn btn-sm btn-warning mt-2">Sign in</Link>
         </div>
         </>
     )

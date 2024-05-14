@@ -3,16 +3,17 @@ import './userDashboard.css';
 import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUp, faBell, faBus, faDollarSign, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { faArrowUp, faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link, useLocation } from 'react-router-dom';
 import { name } from './dummyName';
 import { dummyData } from './dummyData';
-import AppFooter from '../RewardFooter/RewardFooter';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
 
 const UserDashBoard = () => {
     const [loading, setisLoading] = useState(true);
+    const { state } = useLocation();
+    const data = state && state.data;
 
     useEffect(()=>{
         setTimeout(() => {
@@ -70,36 +71,41 @@ const UserDashBoard = () => {
                     <div className='history card text-secondary'>
                         <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
                         <table className='card text-secondary'>
-                            <tr className='bg-light text-left'>
-                                <th>Type</th>
-                                <th>Location</th>
-                                <th>Amount</th>
-                                <th>Status</th>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Transaction ID</th>
-                                <th>Action</th>
+                            <thead>
+                                <tr className='bg-light text-left'>
+                                    <th>Type</th>
+                                    <th>Location</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Transaction ID</th>
+                                    <th>Action</th>
                             </tr>
-                            {
+                            </thead>
+                            <tbody>
+                                {
                                 dummyTransactionData.map(item => {
                                     const { transactionID, transactionType, location, amount, status, date, time, action, color } = item;
-                                    return (<tr title={status} key={transactionID} className='text-left'>
-                                        <td title={transactionType}>{transactionType}</td>
-                                        <td title={location}>{location}</td>
-                                        <td title={amount}>{amount}</td>
-                                        <td title={status} style={{color: `${color}`}}>{status}</td>
-                                        <td title={date}>{date}</td>
-                                        <td title={time}>{time}</td>
-                                        <td title={transactionID}>{transactionID}</td>
-                                        <td title={action} className='text-warning'>{action}</td>
-                                    </tr>)
+                                    return (
+                                        <tr title={status} key={transactionID} className='text-left'>
+                                            <td title={transactionType}>{transactionType}</td>
+                                            <td title={location}>{location}</td>
+                                            <td title={amount}>{amount}</td>
+                                            <td title={status} style={{color: `${color}`}}>{status}</td>
+                                            <td title={date}>{date}</td>
+                                            <td title={time}>{time}</td>
+                                            <td title={transactionID}>{transactionID}</td>
+                                            <td title={action} className='text-warning'>{action}</td>
+                                    </tr>
+                                    )
                                 })
                             }
+                            </tbody>
                         </table>
                     </div>
                 </div>
             </main>
-            <AppFooter/>
         </React.Fragment>
     )
 }

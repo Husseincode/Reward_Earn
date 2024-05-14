@@ -27,9 +27,9 @@ const AppHeader = ({name}) => {
         </Helmet>
         <header className='AppHeader shadow-sm text-dark'>
             <nav>
-                <Logo/>
+                <Link className="text-dark text-decoration-none" to={'/'}><Logo/></Link>
                 <div className="optns">
-                    <Link title={title.home} className="lnk text-dark">{title.home}</Link>
+                    <Link to={'/'} title={title.home} className="lnk text-dark">{title.home}</Link>
                     <a title={title.about} className="lnk text-dark" href="#about">{title.about}</a>
                     <a title={title.contact} className="lnk text-dark" href="#contact">{title.contact}</a>
                     <Link to={'/dashboard'} title={title.dashboard} className="lnk text-dark">{title.dashboard}</Link>
