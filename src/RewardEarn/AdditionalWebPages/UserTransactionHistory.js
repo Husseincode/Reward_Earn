@@ -65,7 +65,7 @@ const UserTransactionHistory = () => {
                         {/* <Link to={'/'}>Dashboard</Link> */}
                         <Link to={'/dashboard'} className='lnk' title='Dashboard'><FontAwesomeIcon icon={faDashcube}/> Dashboard</Link>
                         <Link to={'/transaction'} className='lnk' title='Transaction History'><FontAwesomeIcon icon={faHistory}/> Transaction History</Link>
-                        <Link className='lnk' title='Track Rewards'><FontAwesomeIcon icon={faBus}/> Track Rewards</Link>
+                        <Link to={'/reward'} className='lnk' title='Track Rewards'><FontAwesomeIcon icon={faBus}/> Track Rewards</Link>
                         <Link to={'/'} className='lnk' title='Home'><FontAwesomeIcon icon={faHome}/> Go Home</Link>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const UserTransactionHistory = () => {
                                 </div>
                             </div>
                             <div>
-                                <button style={{backgroundColor: '#F5A800'}} className='btn btn-sm text-white'>Book A Trip</button>
+                                <button style={{backgroundColor: '#F5A800'}} title='Book a trip' className='btn btn-sm text-white'>Book A Trip</button>
                             </div>
                         </div>
                         <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>

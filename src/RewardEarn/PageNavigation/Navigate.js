@@ -6,6 +6,7 @@ import UserDashBoard from "../AdditionalWebPages/UserDashboard";
 import UserTransactionHistory from "../AdditionalWebPages/UserTransactionHistory";
 import SignIn from "../SignInPage/signin";
 import SignUpPage from "../SignUpPage/SignUpPage";
+import UserReward from "../AdditionalWebPages/UserReward";
 
 const Navigate = () => {
     return (
@@ -17,6 +18,7 @@ const Navigate = () => {
                 <Route Component={UserTransactionHistory} path="/transaction"/>
                 <Route Component={SignIn} path="/sign-in"/>
                 <Route Component={SignUpPage} path="/sign-up"/>
+                <Route Component={UserReward} path="/reward"/>
             </Routes>
         </Router>
     )

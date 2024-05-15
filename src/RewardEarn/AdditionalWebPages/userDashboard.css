@@ -34,9 +34,12 @@
 .links > .lnk:link{
     text-decoration: none;
 }
-.links > .lnk:hover{
+.links > .lnk:hover, .lnk:active{
     background-color: #F5A800;
     color: white;
+}
+.links > .lnk:visited{
+    background-color: lightgrey;
 }
 /* .links > .lnk:active{
     background-color: dodgerblue;

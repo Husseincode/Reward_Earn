@@ -4,16 +4,16 @@ import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp, faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { name } from './dummyName';
 import { dummyData } from './dummyData';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
+import { dummyClaimData } from './dummyClaimData';
 
-const UserDashBoard = () => {
+const UserReward = () => {
     const [loading, setisLoading] = useState(true);
-    const { state } = useLocation();
-    const data = state && state.data;
+    const [data, setData] = useState(dummyClaimData);
 
     useEffect(()=>{
         setTimeout(() => {
@@ -68,6 +68,11 @@ const UserDashBoard = () => {
                             })
                         }
                     </div>
+                    <div className='claimCash card p-3'>
+                        {
+
+                        }
+                    </div>
                     <div className='history card text-secondary'>
                         <div className='d-flex justify-content-between'>
                             <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
@@ -113,4 +118,4 @@ const UserDashBoard = () => {
     )
 }
 
-export default UserDashBoard;
+export default UserReward;

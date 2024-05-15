@@ -37,8 +37,8 @@ const AppHeader = ({name}) => {
                         <FontAwesomeIcon className="text-dark user" icon={faUserCircle}/>
                     </Link>
                 </div>
-                <Link to={'/dashboard'} className="btn">
-                    <FontAwesomeIcon className="icon" icon={faBars}/>
+                <Link to={'/dashboard'} title="Dashboard" className="btn">
+                    <FontAwesomeIcon style={{padding: '2px', border: '1px solid black', borderRadius: '50%'}} className="icon" icon={faUserCircle}/>
                 </Link>
             </nav>
         </header>
