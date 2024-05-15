@@ -69,7 +69,10 @@ const UserDashBoard = () => {
                         }
                     </div>
                     <div className='history card text-secondary'>
-                        <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
+                        <div className='d-flex justify-content-between'>
+                            <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
+                            <Link style={{color: '#F5A800'}} className='text-decoration-none' to={'/transaction'}>View All</Link>
+                        </div>
                         <table className='card text-secondary'>
                             <thead>
                                 <tr className='bg-light text-left'>

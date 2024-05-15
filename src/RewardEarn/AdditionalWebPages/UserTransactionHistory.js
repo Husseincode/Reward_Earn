@@ -3,7 +3,7 @@ import './userDashboard.css';
 import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
-import { faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faBus, faHistory, faHome, faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { name } from './dummyName';
 import LoadingPage from '../LoadingPage/LoadingPage';
@@ -11,6 +11,36 @@ import { dummyTransactionData } from './dummyTransactionData';
 
 const UserTransactionHistory = () => {
     const [loading, setisLoading] = useState(true);
+    const [value, setValue] = useState('All');
+    const [data, setData] = useState(dummyTransactionData);
+    const [inputValue, setInputValue] = useState('')
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        setValue(value);
+        if (value === 'All'){
+            setData(dummyTransactionData)
+        }
+        else{
+            const newData = data.filter(item => {return item.status === value});
+            setData(newData);
+        }
+    };
+
+    const handleInputSearch = (e) => {
+        if (inputValue === ''){
+            setData(dummyTransactionData)
+        }
+        else if (inputValue !== ''){
+            const newSearch = data.filter(item => {
+                return item.location.includes(inputValue)
+            })
+            setData(newSearch);
+        }
+        else{
+            setData(dummyTransactionData)
+        }
+    }
 
     useEffect(()=>{
         setTimeout(() => {
@@ -50,22 +80,28 @@ const UserTransactionHistory = () => {
                             <FontAwesomeIcon title={name} className='icon user_icon' icon={faUserCircle}/>
                         </div>
                     </div>
-                    {/* <div className='balances'>
-                        {
-                            dummyData.map(item => {
-                                const { id, title, liquidity, history } = item;
-                                return (
-                                    <div key={id} title={title} className='card'>
-                                        <p>{title}</p>
-                                        <h4 className='fw-bolder'><FontAwesomeIcon icon={faDollarSign}/> {liquidity}</h4>
-                                        <Link style={{textDecoration: 'none', fontSize: '13px'}} className='text-secondary fw-bolder' to={history}>{history} <FontAwesomeIcon style={{transform: 'rotate(40deg)'}} icon={faArrowUp}/></Link>
-                                    </div>
-                                );
-                                
-                            })
-                        }
-                    </div> */}
                     <div className='history card text-secondary'>
+                        <div style={{ display:'flex', justifyContent: 'space-between', alignItems: 'center'}} className='mb-3'>
+                            <div className='d-flex'>
+                                <div className='d-flex'>
+                                    <input placeholder='Location...' value={inputValue} onChange={(e)=>{setInputValue(e.target.value)}} onKeyUp={handleInputSearch} style={{borderRadius: '10px 0px 0px 10px'}} className='form-control'/>
+                                    <button onClick={handleInputSearch} className='btn bg-light' style={{borderRadius: '0px 10px 10px 0px', color: '#F5A800'}}>
+                                        <FontAwesomeIcon icon={faSearch}/>
+                                    </button>
+                                </div>
+                                <div className='d-flex' style={{marginLeft: '10px'}}>
+                                    <select value={value} onChange={handleChange} className='form-select bg-light text-dark'>
+                                        <option value='All'>All</option>
+                                        <option value='Failed'>Failed</option>
+                                        <option value='Success'>Succesful</option>
+                                        <option value='pending'>Pending</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <button style={{backgroundColor: '#F5A800'}} className='btn btn-sm text-white'>Book A Trip</button>
+                            </div>
+                        </div>
                         <p><FontAwesomeIcon icon={faHistory}/> Transaction History</p>
                         <table className='card text-secondary'>
                             <tr className='bg-light text-left'>
@@ -79,7 +115,7 @@ const UserTransactionHistory = () => {
                                 <th>Action</th>
                             </tr>
                             {
-                                dummyTransactionData.map(item => {
+                                data.map(item => {
                                     const { transactionID, transactionType, location, amount, status, date, time, action, color } = item;
                                     return (<tr title={status} key={transactionID} className='text-left'>
                                         <td title={transactionType}>{transactionType}</td>
@@ -89,7 +125,7 @@ const UserTransactionHistory = () => {
                                         <td title={date}>{date}</td>
                                         <td title={time}>{time}</td>
                                         <td title={transactionID}>{transactionID}</td>
-                                        <td title={action} className='text-warning'>{action}</td>
+                                        <td title={action} style={{color: '#F5A800'}}>{action}</td>
                                     </tr>)
                                 })
                             }
