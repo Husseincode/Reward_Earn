@@ -38,9 +38,9 @@
     background-color: #F5A800;
     color: white;
 }
-.links > .lnk:visited{
+/* .links > .lnk:visited{
     background-color: lightgrey;
-}
+} */
 /* .links > .lnk:active{
     background-color: dodgerblue;
     color: white;

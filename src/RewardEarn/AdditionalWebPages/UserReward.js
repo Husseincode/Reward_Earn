@@ -17,12 +17,17 @@ const UserReward = () => {
     const [data, setData] = useState(dummyClaimData);
 
     const claimReward = (e) => {
-        // const { name, value } = e.target;
+        let parent = e.target.parentNode;
+        let button = e.target;
+        let coin = e.target.parentNode.childNodes[1].children[0];
+        let text = e.target.parentNode.childNodes[1].children[1];
+        parent.classList.add('bg-light');
+        button.style.backgroundColor = '#6c757d';
+        button.innerHTML = 'Claimed';
+        coin.style.color = '#6c757d';
+        text.classList.remove('text-dark');
+        text.classList.add('text-secondary');
 
-        // console.log(name, value)
-        // // setData(item => {
-        // //     return [...item, ]
-        // // })
     }
 
     useEffect(()=>{
@@ -81,7 +86,7 @@ const UserReward = () => {
                     <div className='claimCash card p-3'>
                         <div style={{display: 'grid', placeContent: 'center', border: '1px dashed lightgrey'}} className='card p-3 bg-light' >
                             <p>Distance Travelled 10km</p>
-                            <p className='text-center'><FontAwesomeIcon className='text-secondary' icon={faCoins}/> <span className='text-dark'></span></p>
+                            <p className='text-center'><FontAwesomeIcon className='text-secondary' icon={faCoins}/> <span className='text-secondary'>5</span></p>
                             <button className='btn btn-sm btn-secondary text-white'>Claimed</button>
                         </div>
                         {
