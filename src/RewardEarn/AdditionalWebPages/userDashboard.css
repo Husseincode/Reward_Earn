@@ -146,6 +146,12 @@ td, th{
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
+.modify{
+    /* display:'flex', justifyContent: 'space-between', alignItems: 'center' */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 @media screen and (max-width: 767px){
     .body{
@@ -203,5 +209,10 @@ td, th{
     .logo{
         display: flex;
         justify-content: center;
+    }
+    .modify{
+        /* display:'flex', justifyContent: 'space-between', alignItems: 'center' */
+        display: grid;
+        gap: 15px;
     }
 }

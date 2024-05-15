@@ -81,7 +81,7 @@ const UserTransactionHistory = () => {
                         </div>
                     </div>
                     <div className='history card text-secondary'>
-                        <div style={{ display:'flex', justifyContent: 'space-between', alignItems: 'center'}} className='mb-3'>
+                        <div className='mb-3 modify'>
                             <div className='d-flex'>
                                 <div className='d-flex'>
                                     <input placeholder='Location...' value={inputValue} onChange={(e)=>{setInputValue(e.target.value)}} onKeyUp={handleInputSearch} style={{borderRadius: '10px 0px 0px 10px'}} className='form-control'/>
