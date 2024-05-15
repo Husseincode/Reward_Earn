@@ -141,6 +141,11 @@ td, th{
     border: 2px solid black;
     border-radius: 50%;
 }
+.claimCash{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
 
 @media screen and (max-width: 767px){
     .body{
@@ -174,7 +179,7 @@ td, th{
         /* height: 300px; */
     }
     .history > table{
-        overflow: scroll;
+        overflow:auto;
         border: var(--border);
         border-radius: 10px;
         height: 300px;
@@ -187,5 +192,10 @@ td, th{
     th{
         font-weight: bold;
         padding: 0px 10px;
+    }
+    .claimCash{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 10px;
     }
 }

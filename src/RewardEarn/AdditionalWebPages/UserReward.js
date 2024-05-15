@@ -10,10 +10,20 @@ import { dummyData } from './dummyData';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
 import { dummyClaimData } from './dummyClaimData';
+import { faCoins } from '@fortawesome/free-solid-svg-icons/faCoins';
 
 const UserReward = () => {
     const [loading, setisLoading] = useState(true);
     const [data, setData] = useState(dummyClaimData);
+
+    const claimReward = (e) => {
+        // const { name, value } = e.target;
+
+        // console.log(name, value)
+        // // setData(item => {
+        // //     return [...item, ]
+        // // })
+    }
 
     useEffect(()=>{
         setTimeout(() => {
@@ -69,8 +79,22 @@ const UserReward = () => {
                         }
                     </div>
                     <div className='claimCash card p-3'>
+                        <div style={{display: 'grid', placeContent: 'center', border: '1px dashed lightgrey'}} className='card p-3 bg-light' >
+                            <p>Distance Travelled 10km</p>
+                            <p className='text-center'><FontAwesomeIcon className='text-secondary' icon={faCoins}/> <span className='text-dark'></span></p>
+                            <button className='btn btn-sm btn-secondary text-white'>Claimed</button>
+                        </div>
                         {
-
+                            data.map(item => {
+                                const { id, coin, distance_travelled, status } = item;
+                                return (
+                                    <div style={{display: 'grid', placeContent: 'center', border: '1px dashed lightgrey'}} className='card p-3' key={id}>
+                                        <p>Distance Travelled {distance_travelled}</p>
+                                        <p className='text-center'><FontAwesomeIcon style={{color: '#F5A800'}} icon={faCoins}/> <span className='text-dark'>{coin}</span></p>
+                                        <button name='status' value={status} onClick={claimReward} style={{backgroundColor: '#F5A800'}} className='btn btn-sm text-white'>{status}</button>
+                                    </div>
+                                )
+                            })
                         }
                     </div>
                     <div className='history card text-secondary'>
