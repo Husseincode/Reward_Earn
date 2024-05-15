@@ -6,6 +6,8 @@ import reducer from "../Reducer/useReducer";
 import { initialData } from "../Reducer/initialData";
 import k from '../Assets/k.png'
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRocket } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * @AppMain - This returns the page of the main.
@@ -122,6 +124,9 @@ const AppMain = ({name}) => {
                             )
                         })
                     }
+                    </div>
+                    <div className="d-flex justify-content-center mt-5">
+                        <Link to={'/sign-in'} className="btn btn-dark text-center">Dive In <FontAwesomeIcon icon={faRocket}/></Link>
                     </div>
                     <hr/>
                 </div>

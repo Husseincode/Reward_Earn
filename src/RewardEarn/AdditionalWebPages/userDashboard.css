@@ -200,4 +200,8 @@ td, th{
         grid-template-columns: repeat(1, 1fr);
         row-gap: 10px;
     }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
 }
