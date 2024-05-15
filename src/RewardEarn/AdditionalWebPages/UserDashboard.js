@@ -12,13 +12,11 @@ import { dummyTransactionData } from './dummyTransactionData';
 
 const UserDashBoard = () => {
     const [loading, setisLoading] = useState(true);
-    const { state } = useLocation();
-    const data = state && state.data;
-
     useEffect(()=>{
         setTimeout(() => {
             setisLoading(false);
         }, 3000);
+        return () => {}
     },[loading]);
 
     if(loading){

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import './LoadingPage.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import img from '../Assets/Kings .png'
 
 /**

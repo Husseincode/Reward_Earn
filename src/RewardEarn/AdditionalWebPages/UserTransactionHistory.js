@@ -21,7 +21,7 @@ const UserTransactionHistory = () => {
         if (value === 'All'){
             setData(dummyTransactionData)
         }
-        else{
+        else {
             const newData = data.filter(item => {return item.status === value});
             setData(newData);
         }
