@@ -38,7 +38,7 @@ const AppHeader = ({name}) => {
                     </Link>
                 </div>
                 <Link to={'/dashboard'} title="Dashboard" className="btn">
-                    <FontAwesomeIcon style={{padding: '2px', border: '1px solid black', borderRadius: '50%'}} className="icon" icon={faUserCircle}/>
+                    <FontAwesomeIcon style={{padding: '2px', border: '1px solid black', borderRadius: '50%', fontSize: '25px'}} className="icon" icon={faUserCircle}/>
                 </Link>
             </nav>
         </header>

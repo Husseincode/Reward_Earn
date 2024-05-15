@@ -5,6 +5,7 @@ import Notify from "../Notification/Notification";
 import reducer from "../Reducer/useReducer";
 import { initialData } from "../Reducer/initialData";
 import k from '../Assets/k.png'
+import { Link } from "react-router-dom";
 
 /**
  * @AppMain - This returns the page of the main.
@@ -97,6 +98,7 @@ const AppMain = ({name}) => {
                         Experience the joy of traveling while reaping the benefits of loyalty. Whether you're a frequent jet-setter, a weekend adventurer, or someone who simply loves to explore, our Passenger Reward System is your ticket to exclusive perks and privileges.
                         From the moment you sign up, you'll start earning points for every mile you cover.
                     </p>
+                    <Link to={'/sign-in'} className="btn btn-dark btn-sm mt-2">Join now</Link>
                     <hr/>
                 </div>
                 <div>
