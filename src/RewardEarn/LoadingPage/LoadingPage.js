@@ -10,6 +10,7 @@ import img from '../Assets/Kings .png'
 const LoadingPage = () => {
     const [width, setWidth] = useState('100px');
     useEffect(()=>{
+        let timeoutID = 
         setTimeout(()=>{
             if (width === '100px'){
                 setWidth('150px');
@@ -17,7 +18,9 @@ const LoadingPage = () => {
             else{
                 setWidth('100px');
             }
-        }, 1000)
+        }, 1000);
+
+        return () => {clearTimeout(timeoutID)}
     });
     return (
         <div className='loading'>

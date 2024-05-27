@@ -31,9 +31,10 @@ const UserReward = () => {
     }
 
     useEffect(()=>{
-        setTimeout(() => {
+        let timerID = setTimeout(() => {
             setisLoading(false);
         }, 3000);
+        return () => {clearTimeout(timerID)}
     },[loading]);
 
     if(loading){
@@ -84,7 +85,7 @@ const UserReward = () => {
                         }
                     </div>
                     <div className='claimCash card p-3'>
-                        <div style={{display: 'grid', placeContent: 'center', border: '1px dashed lightgrey'}} className='card p-3 bg-light' >
+                        <div style={{display: 'grid', placeContent: 'center', textAlign: 'center', border: '1px dashed lightgrey'}} className='card p-3 bg-light' >
                             <p>Distance Travelled 10km</p>
                             <p className='text-center'><FontAwesomeIcon className='text-secondary' icon={faCoins}/> <span className='text-secondary'>5</span></p>
                             <button className='btn btn-sm btn-secondary text-white'>Claimed</button>
@@ -93,7 +94,7 @@ const UserReward = () => {
                             data.map(item => {
                                 const { id, coin, distance_travelled, status } = item;
                                 return (
-                                    <div style={{display: 'grid', placeContent: 'center', border: '1px dashed lightgrey'}} className='card p-3' key={id}>
+                                    <div style={{display: 'grid', placeContent: 'center', textAlign: 'center' , border: '1px dashed lightgrey'}} className='card p-3' key={id}>
                                         <p>Distance Travelled {distance_travelled}</p>
                                         <p className='text-center'><FontAwesomeIcon style={{color: '#F5A800'}} icon={faCoins}/> <span className='text-dark'>{coin}</span></p>
                                         <button name='status' value={status} onClick={claimReward} style={{backgroundColor: '#F5A800'}} className='btn btn-sm text-white'>{status}</button>

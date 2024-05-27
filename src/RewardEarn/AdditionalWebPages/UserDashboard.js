@@ -1,23 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './userDashboard.css';
 import Logo from '../RewardHeader/Logo';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp, faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { name } from './dummyName';
 import { dummyData } from './dummyData';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
+import { onSnapshot, collection } from 'firebase/firestore';
+import { db } from '../../FirebseConfig/firebaseconfig';
 
 const UserDashBoard = () => {
     const [loading, setisLoading] = useState(true);
+    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState(null);
+    const person = JSON.parse(localStorage.getItem('userData'));
+
     useEffect(()=>{
-        setTimeout(() => {
+        // console.log(person, user);
+        let timerID = setTimeout(() => {
             setisLoading(false);
         }, 3000);
-        return () => {}
-    },[loading]);
+        onSnapshot(collection(db, 'users'), (snapshot)=>{
+            setUsers(snapshot.docs.map(doc => doc.data()))
+        });
+        return () => { clearTimeout(timerID) }
+    }, [loading]);
 
     if(loading){
         return (
@@ -43,12 +53,12 @@ const UserDashBoard = () => {
                 <div className='secondSection bg-light'>
                     <div className='intro'>
                         <div>
-                            <h6 className='fw-bolder'>Welcome Back, {name}</h6>
+                            <h6 className='fw-bolder'>Welcome Back, {person.name}</h6>
                             <span className='text-secondary'>Dashboard overview</span>
                         </div>
                         <div>
                             <FontAwesomeIcon title='notification' className='icon' icon={faBell}/>
-                            <FontAwesomeIcon title={name} className='icon user_icon' icon={faUserCircle}/>
+                            <FontAwesomeIcon title={person.name} className='icon user_icon' icon={faUserCircle}/>
                         </div>
                     </div>
                     <div className='balances'>

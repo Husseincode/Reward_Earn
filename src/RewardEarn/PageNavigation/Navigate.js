@@ -5,7 +5,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import UserDashBoard from "../AdditionalWebPages/UserDashboard";
 import UserTransactionHistory from "../AdditionalWebPages/UserTransactionHistory";
 import SignIn from "../SignInPage/signin";
-import SignUpPage from "../SignUpPage/SignUpPage";
+import { SignUpPage } from "../SignUpPage/SignUpPage";
 import UserReward from "../AdditionalWebPages/UserReward";
 
 const Navigate = () => {
