@@ -23,6 +23,8 @@ const AppFooter = ({name}) => {
             case 'Twitter':
                 window.open('https://x.com/Abayomi_hussein', '_blank')
                 break;
+            case 'Email':
+                window.location.href = 'mailto:akanjiabayomi2@gmail.com';
             default:
                 break;
         }
