@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import Logo from "../RewardHeader/Logo";
+import { openLink } from "./links";
 
 /**
  * @AppFooter - This returns the page of the footer.
@@ -12,23 +13,6 @@ import Logo from "../RewardHeader/Logo";
  * @returns: The App Footer Component
  */
 const AppFooter = ({name}) => {
-    const openLink = (e) => {
-        switch (e) {
-            case 'Github':
-                window.open('https://github.com/Husseincode', '_blank')
-                break;
-            case 'Facebook':
-                window.open('https://facebook.com', '_blank')
-                break;
-            case 'Twitter':
-                window.open('https://x.com/Abayomi_hussein', '_blank')
-                break;
-            case 'Email':
-                window.location.href = 'mailto:akanjiabayomi2@gmail.com';
-            default:
-                break;
-        }
-    };
     return (
         <footer className="bg-dark text-secondary text-center">
             <section>
