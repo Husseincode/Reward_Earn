@@ -1,3 +1,4 @@
+/* eslint-disable no-fallthrough */
 import React from "react";
 import './RewardFooter.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,15 +12,30 @@ import Logo from "../RewardHeader/Logo";
  * @returns: The App Footer Component
  */
 const AppFooter = ({name}) => {
+    const openLink = (e) => {
+        switch (e) {
+            case 'Github':
+                window.open('https://github.com/Husseincode', '_blank')
+                break;
+            case 'Facebook':
+                window.open('https://facebook.com', '_blank')
+                break;
+            case 'Twitter':
+                window.open('https://x.com/Abayomi_hussein', '_blank')
+                break;
+            default:
+                break;
+        }
+    };
     return (
         <footer className="bg-dark text-secondary text-center">
             <section>
                 <Logo/>
                 <div className="social_icons mt-3">
-                    <FontAwesomeIcon title="Github" className="icon" icon={faGithub}/>
-                    <FontAwesomeIcon title="Facebook" className="icon" icon={faFacebook}/>
-                    <FontAwesomeIcon title="Twitter" className="icon" icon={faXTwitter}/>
-                    <FontAwesomeIcon title="Email developer" className="icon" icon={faEnvelopeCircleCheck}/>
+                    <FontAwesomeIcon onClick={()=>{openLink('Github')}} title="Github" className="icon" icon={faGithub}/>
+                    <FontAwesomeIcon onClick={()=>{openLink('Facebook')}} title="Facebook" className="icon" icon={faFacebook}/>
+                    <FontAwesomeIcon onClick={()=>{openLink('Twitter')}} title="Twitter" className="icon" icon={faXTwitter}/>
+                    <FontAwesomeIcon onClick={()=>{openLink('Email')}} title="Email developer" className="icon" icon={faEnvelopeCircleCheck}/>
                 </div>
                 <span className="mt-2">&copy; React <time>2024</time></span>
             </section>

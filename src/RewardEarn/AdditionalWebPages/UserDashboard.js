@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUp, faBell, faBus, faHistory, faHome, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { name } from './dummyName';
 import { dummyData } from './dummyData';
 import LoadingPage from '../LoadingPage/LoadingPage';
 import { dummyTransactionData } from './dummyTransactionData';
